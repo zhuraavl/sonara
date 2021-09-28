@@ -1,0 +1,257 @@
+
+
+
+
+
+@font-face {
+    font-family: 'American Typewriter';
+    src: url('../fonts/AmericanTypewriter.woff2') format('woff2'),
+        url('../fonts/AmericanTypewriter.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Herbus';
+    src: url('../fonts/Herbus-Regular.woff2') format('woff2'),
+        url('../fonts/Herbus-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ohno Fatface 12 Pt Narrow';
+    src: url('../fonts/OhnoFatface-12PtNarrow.woff2') format('woff2'),
+        url('../fonts/OhnoFatface-12PtNarrow.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Louize Display';
+    src: url('../fonts/../fonts/LouizeDisplay-Italic.woff2') format('woff2'),
+        url('../fonts/../fonts/LouizeDisplay-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Louize Display';
+    src: url('../fonts/LouizeDisplay.woff2') format('woff2'),
+        url('../fonts/LouizeDisplay.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+
+
+
+
+.bold {
+  font-family: 'Ohno Fatface 12 Pt Narrow';
+}
+.lite {
+  font-family: 'American Typewriter';
+}
+.louzie-italic {
+  font-family: 'Louize Display';
+  font-style: italic;
+  line-height: 1.2;
+}
+.herbus {
+  font-family: 'Herbus';
+}
+
+
+
+
+body {
+  font-size: calc( (100vw - 30rem)/50 * 0.5 + 1rem) !important;
+  font-family: 'American Typewriter';
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+h1, h2 {
+  font-size: 4.1vw;
+  text-transform: uppercase;
+  font-family: 'Ohno Fatface 12 Pt Narrow';
+  margin-bottom: 1.5vw;
+  line-height: 1;
+  @include media-breakpoint-down(xs) {
+    font-size: 31px;
+    margin-bottom: 15px;
+  }
+}
+
+h3 {
+  font-size: 1.9vw;
+  font-family: 'Ohno Fatface 12 Pt Narrow';
+  @include media-breakpoint-down(xs) {
+    font-size: 23px;
+  }
+}
+
+h4 {
+  font-size: 1.563vw;
+  @include media-breakpoint-down(lg) {
+    font-size: 1.75vw;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 18px;
+  }
+}
+
+h5 {
+  font-size: 1.45vw;
+  @include media-breakpoint-down(lg) {
+    font-size: 1.45vw;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 15px;
+  }
+}
+
+small, .small {
+  font-size: .9vw;
+  @include media-breakpoint-down(lg) {
+    font-size: 1.25vw;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 13px !important;
+  }
+}
+.smalls {
+  font-size: .86vw;
+  @include media-breakpoint-down(lg) {
+    font-size: 1.2vw;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 13px;
+  }
+}
+.mobil-small {
+  
+  @include media-breakpoint-down(xs) {
+    font-size: 13px !important;
+  }
+}
+
+
+
+a, button {
+  font-family: 'Ohno Fatface 12 Pt Narrow';
+  font-size: 1.4vw; 
+  @include media-breakpoint-down(xs) {
+    font-size: 16px;
+  }
+}
+a {
+  word-break: break-word;
+}
+
+p, input, li {
+  font-size: 1.4vw;
+  line-height: 1.4;
+  @include media-breakpoint-down(lg) {
+    font-size: 1.45vw !important;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 16px !important;
+  }
+}
+
+.h1 {
+  font-size: 5vw;
+  margin-bottom: 0;
+  @include media-breakpoint-down(xs) {
+    font-size: 45px;
+  }
+}
+
+button {
+  cursor: pointer;
+  outline: none !important;
+}
+
+a {
+  color: #000000;
+  &:hover {
+    color: #000000;
+    text-decoration: none;
+  }
+}
+
+
+.link {
+  font-size: 1.6vw;
+  text-transform: uppercase;
+  position: relative;
+  @include media-breakpoint-down(lg) {
+    font-size: 1.35vw;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 15px;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -.2vh;
+    left: 0;
+    width: 100%;
+    border-bottom: 3px dotted #274D44;
+    @include media-breakpoint-down(xs) {
+      border-bottom: 1.5px dotted #274D44;
+    }
+  }
+  &:hover {
+    &:after {
+        -webkit-animation-duration: .5s;
+        animation-duration: .5s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-name: link;
+        animation-name: link;
+      }
+    }
+}
+
+
+@-webkit-keyframes link {
+  0% {
+    width: 0;
+  }
+  
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes link {
+  0% {
+    width: 0;
+  }
+  
+  100% {
+    width: 100%;
+  }
+}
+
+

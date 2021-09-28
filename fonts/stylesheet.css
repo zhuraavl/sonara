@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Herbus';
+    src: url('Herbus-Regular.woff2') format('woff2'),
+        url('Herbus-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ohno Fatface 12 Pt Narrow';
+    src: url('OhnoFatface-12PtNarrow.woff2') format('woff2'),
+        url('OhnoFatface-12PtNarrow.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Louize Display';
+    src: url('LouizeDisplay-Italic.woff2') format('woff2'),
+        url('LouizeDisplay-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Louize Display';
+    src: url('LouizeDisplay.woff2') format('woff2'),
+        url('LouizeDisplay.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

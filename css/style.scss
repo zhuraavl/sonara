@@ -535,7 +535,7 @@ height: auto;
 }
 .hello-hero {
   @include media-breakpoint-down(xs) {
-    transform: translateX(30%);
+    
    
   }
 }
@@ -702,13 +702,23 @@ section.explore {
 }
 .explore-hero {
   width: 70%;
-  margin-top: -10vw;
+  margin-top: -14vw;
   @include media-breakpoint-down(xs) {
     margin: 0;
     width: 90%;
   }
 }
 
+.explore-hero-cloud {
+  @include media-breakpoint-down(xs) {
+    width: 75%;
+    float: right;
+    margin-top: -40px;
+    margin-bottom: -20px;
+    position: relative;
+    z-index: -10;
+  }
+}
 
 
 
@@ -719,22 +729,24 @@ section.explore {
   .container {
     position: relative;
   }
-  .slider-quote:before {
-    content: '“';
+  .slider-quote-icon {
+    content: '';
     position: absolute;
-    left: -7%;
-    top: -14%;
-    width: 50px;
-    height: 50px;
-    font-size: 5vw;
+    left: -5%;
+    top: 3%;
+    width: 2.7vw;
+    height: 2.7vw;
+    background-size: contain;
+    background-repeat: no-repeat;
     z-index: 10;
-    font-family: 'Ohno Fatface 12 Pt Narrow';
     @include media-breakpoint-down(xs) {
-      font-size: 40px;
-      left: 5%;
-      top: -9%;
+      width: 20px;
+      height: 20px;
+      left: -5%;
+      top: 2%;
     }
   }
+  
   h2 {
     @include media-breakpoint-down(xs) {
       font-size: 23px;
@@ -798,9 +810,10 @@ section.explore {
       display: inline-block;
       margin: auto;
       text-align: center;
-      transform: translateY(-2.8vw);
+      transform: translateY(-150%);
       padding: 0 .5vw;
       @include media-breakpoint-down(xs) {
+        transform: translateY(-140%);
       }
     }
   }
@@ -1157,7 +1170,8 @@ section.explore {
   } 
 }
 .gm-style-iw-d::-webkit-scrollbar {
-  width: 5px !important;
+  width: 6px !important;
+   background-color: #000 !important;
   
 }
 .gm-style-iw-d::-webkit-scrollbar-track {
@@ -1168,8 +1182,8 @@ section.explore {
 }
 .gm-style-iw-d::-webkit-scrollbar-thumb {
   background-color: #000 !important;
-  border: 1px solid #000 !important;
-  border-radius: 15px !important;
+  border: 2px solid #fff !important;
+  
 }
 
 .marker-box {
@@ -1348,17 +1362,20 @@ section.explore {
       font-size: 23px;
       border-bottom: 1.5px solid rgba(0, 0, 0, 0.5);
       padding: 10px 0;
+      margin: 10px 0;
     }
   }
   textarea {
     height: 6vh;
     overflow-y: hidden;
+    line-height: 1;
     &::placeholder {
       color: rgba(0, 0, 0, 0.5);
     }
     @include media-breakpoint-down(xs) {
       height: auto;
       padding: 0;
+      margin: 25px 0 10px;
     }
   }
   .bord {
@@ -1461,7 +1478,9 @@ section.explore {
     width: 100%;
     margin: auto;
     padding-top: 13vh;
-    
+    @include media-breakpoint-down(xs) {
+      padding-bottom: 13vh;
+    }
     .lightbox-title {
       color: #F7D23A;
       position: absolute;
@@ -1483,7 +1502,7 @@ section.explore {
         }
       }
       @include media-breakpoint-down(xs) {
-        background: #000000;
+        background: #2A296B;
         position: fixed;
         bottom: 0;
         left: 0;
@@ -1775,6 +1794,9 @@ section.explore {
 
 .js-tooltip {
   cursor: pointer;
+  @include media-breakpoint-down(xs) {
+    padding-left: 1.1em;
+  }
   &:bover {
     color: #9C0C34 !important;
   }
@@ -1789,9 +1811,15 @@ section.explore {
     font-style: italic;
     position: absolute;
     left: 0;
+    @include media-breakpoint-down(xs)  {
+      left: .6em;
+    }
   }
   h3 {
     padding-left: 1vw;
+    @include media-breakpoint-down(xs) {
+      margin-bottom: .5em;
+    }
   }
   h3 span {
     font-family: 'Louize Display';
@@ -1815,6 +1843,27 @@ section.explore {
 
 .js-tooltip:hover .js-tooltip-label {
   opacity: 1 !important;
+}
+
+
+
+.features-slider {
+  @include media-breakpoint-down(xs)  {
+    margin-top: -10px;
+  }
+  .box {
+    padding-right: 5vw;
+    @include media-breakpoint-down(xs) {
+      padding-right: 80px;
+      margin-left: -40px;
+      opacity: .6;
+      transition: all .3s;
+    }
+    &.slick-center {
+      opacity: 1;
+    }
+  }
+  
 }
 
 

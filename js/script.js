@@ -58,7 +58,9 @@ else {
  $(function(){
     $(document).scroll(function(){
         if($(this).scrollTop() >= $('footer').offset().top - 50) {
+           
             $("#header").addClass('change-color-footer');
+            
         } else {
             $("#header").removeClass('change-color-footer');
         }
@@ -267,7 +269,26 @@ else {
   ]
   });
   
-   
+   $('.features-slider').slick({
+    speed: 1000,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    cssEase: 'ease-in-out',
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+    responsive: [
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        centerMode: true,
+        centerPadding:'40px',
+      }
+    }
+  ]
+  });
+  
   
   
 $('.rooms-slider').slick({

@@ -20,8 +20,9 @@
   z-index: 10;
   cursor: pointer;
   @include media-breakpoint-down(xs) {
-    width: 47px;
-    top: 18px;
+    width: 37px;
+    top: 15px;
+    right: 15px;
   }
   svg {
     width: 100%;
@@ -71,23 +72,27 @@
 
 .menu-icon {
   position: absolute;
-  top: 2vw;
-  left: 1.3vw;
+  top: 2.2vw;
+  left: 1.5vw;
   z-index: 10;
+  
+  
   @include media-breakpoint-down(xs) {
     top: 15px !important;
+    left: 15px !important;
   }
   .open-menu {
     background: transparent;
     border: 0;
     line-height: 1;
     text-transform: uppercase;
+    padding: 0;
     
   }
 }
 .open-menu span {
     height: .22vw;
-    width: 2.5vw;
+    width: 2.8vw;
     background: #000000;
     border-radius: 20px;
     margin: .7vw 0;
@@ -154,7 +159,7 @@ header.change-color-footer {
   }
   .check {
     svg path {
-      fill: #F7D23A !important;
+      stroke: #F7D23A !important;
     }
   }
 }

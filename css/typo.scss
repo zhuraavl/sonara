@@ -13,6 +13,17 @@
 }
 
 @font-face {
+    font-family: 'American Typewriter Uppercase';
+    src: url('../fonts/AmericanTypewriter-Condensed.woff2') format('woff2'),
+        url('../fonts/AmericanTypewriter-Condensed.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  
+}
+
+
+@font-face {
     font-family: 'Herbus';
     src: url('../fonts/Herbus-Regular.woff2') format('woff2'),
         url('../fonts/Herbus-Regular.woff') format('woff');
@@ -61,6 +72,9 @@
 .lite {
   font-family: 'American Typewriter';
 }
+.lite-upper {
+  font-family: 'American Typewriter Uppercase';
+}
 .louzie-italic {
   font-family: 'Louize Display';
   font-style: italic;
@@ -90,7 +104,7 @@ body {
 
 
 h1, h2 {
-  font-size: 4.1vw;
+  font-size: 3.95vw;
   text-transform: uppercase;
   font-family: 'Ohno Fatface 12 Pt Narrow';
   margin-bottom: 1.5vw;
@@ -130,7 +144,8 @@ h5 {
 }
 
 small, .small {
-  font-size: .9vw;
+  font-size: 1vw;
+  line-height: 1.3;
   @include media-breakpoint-down(lg) {
     font-size: 1.25vw;
   }
@@ -169,7 +184,8 @@ a {
 
 p, input, li {
   font-size: 1.4vw;
-  line-height: 1.4;
+  line-height: 1.35;
+  margin-bottom: .9rem;
   @include media-breakpoint-down(lg) {
     font-size: 1.45vw !important;
   }
@@ -201,11 +217,11 @@ a {
 
 
 .link {
-  font-size: 1.6vw;
+  font-size: 1.55vw;
   text-transform: uppercase;
   position: relative;
   @include media-breakpoint-down(lg) {
-    font-size: 1.35vw;
+    font-size: 1.30vw;
   }
   @include media-breakpoint-down(xs) {
     font-size: 15px;
@@ -216,9 +232,9 @@ a {
     bottom: -.2vh;
     left: 0;
     width: 100%;
-    border-bottom: 3px dotted #274D44;
+    height: 3px;
+    background-image: url(../media/dot-x.svg);
     @include media-breakpoint-down(xs) {
-      border-bottom: 1.5px dotted #274D44;
     }
   }
   &:hover {

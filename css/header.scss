@@ -15,7 +15,7 @@
 .check {
   position: absolute;
   width: 3.2vw;
-  top: 2.5vw;
+  top: 2vw;
   right: 1.4vw;
   z-index: 10;
   cursor: pointer;
@@ -53,7 +53,7 @@
 }
 .logo {
   position: absolute;
-  width: 11vw;
+  width: 14vw;
   left: 0;
   right: 0;
   margin: auto;
@@ -87,7 +87,7 @@
 }
 .open-menu span {
     height: .22vw;
-    width: 2.8vw;
+    width: 2.5vw;
     background: #000000;
     border-radius: 20px;
     margin: .7vw 0;
@@ -123,7 +123,7 @@
   }
   .check {
     svg path {
-      fill: #F7D23A !important;
+      stroke: #F7D23A !important;
     }
   }
 }
@@ -140,7 +140,7 @@ header.change-color {
   }
   .check {
     svg path {
-      fill: #000000 !important;
+      stroke: #000000 !important;
     }
   }
 }
@@ -162,13 +162,15 @@ header.change-color-footer {
 
 
 
+
+
 .off-menu {
   position: fixed;
   width: 30%;
   height: 100%;
   z-index: 101;
   background: #fff;
-  padding: 2rem;
+  padding: 1.5rem 1.5rem;
   transition: all .3s ease-in;
   transform: translateX(-100%);
   border-right: 2px solid #000;
@@ -184,8 +186,8 @@ header.change-color-footer {
     list-style: none;
     li {
       font-size: 1.8vw;
-      padding-bottom: .4vh;
-      
+      padding-bottom: 0;
+      margin-bottom: .4rem;
       @include media-breakpoint-down(xs) {
         font-size: 23px;
         padding-bottom: 10px;
@@ -280,10 +282,10 @@ header.change-color-footer {
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 2rem;
+  padding: 1.5rem;
   p, a {
-    font-size: 1.1vw;
-    line-height: 1.6;
+    font-size: 1.3vw;
+    line-height: 1.4;
     @include media-breakpoint-down(xs)  {
       font-size: 15px;
     }

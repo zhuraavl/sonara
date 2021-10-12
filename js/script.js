@@ -321,21 +321,6 @@ $('.rooms-slider').mouseover(function() {
   
   
 
-// tooltip
-  var tooltips = document.querySelectorAll('.js-tooltip .js-tooltip-label');
-
-window.onmousemove = function (e) {
-    var x = (e.pageX + 20) + 'px',
-        y = (e.pageY + 20) + 'px';
-    for (var i = 0; i < tooltips.length; i++) {
-        tooltips[i].style.top = y;
-        tooltips[i].style.left = x;
-    }
-};
-  
-
-
-  
 
 
 
@@ -343,6 +328,31 @@ window.onmousemove = function (e) {
   
   
 });
+
+
+
+// tooltip
+  var tooltips = document.querySelectorAll('.js-tooltip-label');
+
+window.onmousemove = function (e) {
+    var x = (e.clientX + 20) + 'px',
+        y = (e.clientY + 20) + 'px';
+    for (var i = 0; i < tooltips.length; i++) {
+        tooltips[i].style.top = y;
+        tooltips[i].style.left = x;
+    }
+};
+  
+//  function toolTi(e) {
+//    var x = e.clientX;
+//    var y = e.clientY;
+//    tooltips.style.left = x + "px";
+//    tooltips.style.top = y + "px";
+//};
+
+
+  
+
 
 
 

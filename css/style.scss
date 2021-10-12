@@ -54,12 +54,19 @@ section {
 
 
 hr {
-  border-top: 2px dotted #000;
+  background-image: url(../media/dot-x.svg);
+  width: 100%;
+  height: 3px;
+
+  
+  background-repeat: repeat-x;
+  
   @include media-breakpoint-down(xs) {
     border-top: 2px dotted #000;
   }
   &.solid {
     border-top: 2px solid #000 !important;
+    background-image: none;
   }
 }
 
@@ -557,7 +564,7 @@ height: auto;
   }
   img {
     max-width: 100%;
-    height: 60vh;
+    height: 70vh;
     width: auto;
     padding-bottom: .5vw;
     padding-right: 2vw;
@@ -577,7 +584,7 @@ height: auto;
     
   }
   .slick-arrow {
-    bottom: -30px; 
+    
   }
   .gallery-img {
     display: none;
@@ -589,11 +596,13 @@ height: auto;
 
 
 
+
+
 .slick-arrow {
   position: absolute;
   font-size: 0;
-  width: 2.6vw;
-  height: 2.6vw;
+  width: 2.2vw;
+  height: 2.2vw;
   background-size: contain !important;
   background-position: center;
   background-repeat: no-repeat !important;
@@ -649,7 +658,7 @@ height: auto;
 
 
 .slick-arrow {
-  top: -5.4vw;
+  top: -5.1vw;
   right: 0;
   @include media-breakpoint-down(xs) {
     bottom: -50px;
@@ -659,7 +668,7 @@ height: auto;
   }
 }
 .slick-prev {
-  right: 5.5vw;
+  right: 4vw;
   @include media-breakpoint-down(xs) {
     right: 50px !important;
   }
@@ -681,28 +690,13 @@ height: auto;
 section.explore {
   .container {
     position: relative;
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-      left: 0;
-      width: 97.5%;
-      height: calc(100% + 3px);
-      border: 3px dotted #000; 
-      z-index: -1;
-      @include media-breakpoint-down(xs) {
-        
-      }
-    }
+    
     
   }
 }
 .explore-hero {
-  width: 70%;
-  margin-top: -14vw;
+  width: 63%;
+  margin-top: -16.5vw;
   @include media-breakpoint-down(xs) {
     margin: 0;
     width: 90%;
@@ -721,6 +715,40 @@ section.explore {
 }
 
 
+
+.b-top {
+  background-image: url(../media/dot-x.svg);
+  width: 98%;
+  height: 3px;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+}
+.b-bottom {
+  background-image: url(../media/dot-x.svg);
+  width: 98%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+}
+.b-left, .b-right {
+  background-image: url(../media/dot-y.svg);
+  width: 3px;
+  height: 100%;
+  bottom: 0;
+  position: absolute;
+}
+.b-left {
+  left: 1%;
+}
+.b-right {
+  right: 1%;
+}
 
 // quote
 
@@ -756,7 +784,7 @@ section.explore {
 }
 
 .quote-logo-one {
-  width: 36%;
+  width: 38%;
   @include media-breakpoint-down(xs) {
       width: 70%;
     }
@@ -778,14 +806,14 @@ section.explore {
   }
   
   .slick-arrow {
-    top: 0%;
+    top: 5%;
     right: 0;
     @include media-breakpoint-down(xs) {
       bottom: -125px;
     }
   }
   .slick-prev {
-    right: 5vw;
+    right: 4vw;
   }
 }
 
@@ -796,12 +824,11 @@ section.explore {
 
 .features {
   position: relative;
+  contain: content;
   h3 {
     text-transform: uppercase;
   }
-  hr {
-    border-style: dotted;
-  }
+  
   .title-border {
     text-align: center;
     margin-bottom: -1vw;
@@ -861,7 +888,7 @@ section.explore {
 
 .room-hero-text-box::-webkit-scrollbar-thumb {
   background-color: #000 !important;
-  border: 3px solid #ffffff !important;
+  border: 2px solid #ffffff !important;
   border-radius: 15px !important;
   
 }
@@ -874,7 +901,7 @@ section.explore {
   height: 100%;
   min-height: 650px;
   top: 0;
-  left: 0;
+  left: 1rem;
   z-index: 100;
   background: #fff;
   overflow: hidden;
@@ -896,6 +923,7 @@ section.explore {
     margin: .7em auto;
     min-height: auto;
     height: auto;
+    left: 0;
     border: 1.5px solid #000000;
     padding-bottom: 90px !important;
   }
@@ -1034,7 +1062,7 @@ section.explore {
 
 .map-container {
   position: relative;
-  border: 3px solid #000000;
+  border: 2px solid #000000;
   @include media-breakpoint-down(xs) {
     border: 0;
   }
@@ -1046,7 +1074,7 @@ section.explore {
   top: 0;
   right: 0%;
   width: 50%;
-  border-left: 3px solid #000;
+  border-left: 2px solid #000;
   height: 100%;
   @include media-breakpoint-down(xs) {
     position: relative;
@@ -1061,7 +1089,7 @@ section.explore {
   
   
   .js-accordion-title {
-    border-top: 3px solid;
+    border-top: 2px solid;
     margin-bottom: 0;
     padding: 3.3vh 1.5vw;
     font-size: 1.6vw; 
@@ -1085,15 +1113,15 @@ section.explore {
       content: '';
       position: absolute;
       top: 0;
-      right: 1.5vw;
+      right: 1.45vw;
       bottom: 0;
       width: 1.05vw;
-      height: .35vw;
+      height: .25vw;
       background: #000000;
       margin: auto;
       @include media-breakpoint-down(xs) {
         width: 13px;
-        height: 3px;
+        height: 2px;
         right: 15px;
       }
     }
@@ -1103,12 +1131,12 @@ section.explore {
       top: 0;
       right: 1.84vw;
       bottom: 0;
-      width: .35vw;
+      width: .25vw;
       height: 1.05vw;
       background: #000000;
       margin: auto;
       @include media-breakpoint-down(xs) {
-        width: 3px;
+        width: 2px;
         height: 13px;
         right: 20px;
       }
@@ -1335,14 +1363,10 @@ section.explore {
   position: relative;
   background: #ffffff;
   z-index: 10;
-  border: 2px dotted #000;
   @include media-breakpoint-down(xs) {
     max-width: 90%;
   }
-  .row {
-    z-index: 20;
-    position: relative;
-  }
+  
   
 }
 
@@ -1742,7 +1766,7 @@ section.explore {
     }
   }
   .link:after {
-    border-bottom: 3px solid #FDF5E6;
+    border-bottom: 2px solid #FDF5E6;
   }
   
   
@@ -1786,9 +1810,7 @@ section.explore {
 }
 
 
-.contact-box {
-  border: 2px dotted #000;
-}
+
 
 
 
@@ -1827,6 +1849,7 @@ section.explore {
   }
 }
 
+
 .js-tooltip-label {
     opacity: 0;
     background: #fff;
@@ -1838,7 +1861,10 @@ section.explore {
     z-index: 100;
     position: fixed;
      overflow:hidden;
+    -webkit-transform: none !important;
+    transform: none !important;
   }
+
 
 
 .js-tooltip:hover .js-tooltip-label {
@@ -1863,6 +1889,11 @@ section.explore {
       opacity: 1;
     }
   }
+  
+}
+
+.group-hero-img {
+  width: 65%;
   
 }
 

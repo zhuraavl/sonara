@@ -114,6 +114,7 @@ footer .slick-arrow {
   width: 100%;
   text-transform: uppercase;
   border-radius: 0;
+  margin-bottom: 0;
   outline: none;
   font-size: 1.4vw;
   @include media-breakpoint-down(xs) {
@@ -180,7 +181,7 @@ footer .slick-arrow {
 
 .inst-slider {
   .slick-arrow {
-    top: -6.4vw;
+    top: -6.2vw;
   } 
   img {
     padding-right: 3%;

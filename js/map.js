@@ -593,7 +593,7 @@ var map1 =
     for (var i = 0; i < locationsSecond.length; i++) {
 
         var markerIcon2 = {
-            url: "media/lumbermarker.svg",
+            url: "media/sonaramarker.svg",
             scaledSize: new google.maps.Size(30, 30),
         };
 

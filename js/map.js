@@ -567,11 +567,11 @@ var map1 =
         var mapIcon = {
             path: google.maps.SymbolPath.CIRCLE,
             fillOpacity: 1,
-            fillColor: '#FDF5E6',
+            fillColor: '#000',
             strokeOpacity: 1,
             strokeWeight: 2,
-            strokeColor: '#274D44',
-            scale: 12
+            strokeColor: '#000',
+            scale: 14
         };
 
         var marker = new google.maps.Marker({
@@ -579,7 +579,7 @@ var map1 =
             map: map,
             title: locations[i][1],
             icon: mapIcon,
-            label: {color: '#274D44', fontSize: '13px', fontWeight: '500', text: (i+1).toString()}
+            label: {color: '#fff', fontSize: '15px', fontFamily:' American Typewriter', fontWeight: '500', text: (i+1).toString()}
         });
 
         // Register a click event listener on the marker to display the corresponding infowindow content
@@ -594,7 +594,7 @@ var map1 =
 
         var markerIcon2 = {
             url: "media/sonaramarker.svg",
-            scaledSize: new google.maps.Size(30, 30),
+            scaledSize: new google.maps.Size(35, 35),
         };
 
         var marker2 = new google.maps.Marker({
